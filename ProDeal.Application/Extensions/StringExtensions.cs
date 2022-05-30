@@ -7,9 +7,7 @@
             int i;
 
             if (int.TryParse(s.Trim(), out i))
-            {
                 return i;
-            }
 
             return null;
         }

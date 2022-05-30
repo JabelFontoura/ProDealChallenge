@@ -9,6 +9,7 @@ namespace ProDealChallenge.WebApi.Controllers
     {
         private readonly IFolderItemWriteService _folderItemWriteService;
         private readonly IFolderItemReadService _folderItemReadService;
+
         public FolderItemController(IFolderItemWriteService folderItemWriteService, IFolderItemReadService folderItemReadService)
         {
             _folderItemWriteService = folderItemWriteService;

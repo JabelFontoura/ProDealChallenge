@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace ProDeal.Application.Mapper
+namespace ProDeal.Application.AutoMapper
 {
     public class AutoMapperConfiguration
     {

@@ -10,12 +10,12 @@ namespace ProDeal.Application.Services
 {
     public class FolderItemWriteService : IFolderItemWriteService
     {
-        private readonly ProDealDbContext _context;
+        private readonly ProDealDbContext _dbContext;
         private readonly IConfiguration _configuration;
 
         public FolderItemWriteService(ProDealDbContext context, IConfiguration configuration)
         {
-            _context = context;
+            _dbContext = context;
             _configuration = configuration;
         }
 
@@ -31,19 +31,19 @@ namespace ProDeal.Application.Services
 
             ValidateData(data);
 
-            await _context.FolderItems.AddRangeAsync(data);
-            await _context.SaveChangesAsync();
+            await _dbContext.FolderItems.AddRangeAsync(data);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task DeleteAll()
         {
-           _context.FolderItems.RemoveRange(_context.FolderItems.ToList());
-           await _context.SaveChangesAsync();
+           _dbContext.FolderItems.RemoveRange(_dbContext.FolderItems.ToList());
+           await _dbContext.SaveChangesAsync();
         }
 
         private void ValidateData(List<FolderItem> data)
         {
-            var hasExistingValueInDb = _context.FolderItems.Any(x => data.Select(d => d.ExternalId).Contains(x.ExternalId));
+            var hasExistingValueInDb = _dbContext.FolderItems.Any(x => data.Select(d => d.ExternalId).Contains(x.ExternalId));
 
             if (hasExistingValueInDb)
                 throw new BusinessException("File has duplicated values and can't be uploaded.");

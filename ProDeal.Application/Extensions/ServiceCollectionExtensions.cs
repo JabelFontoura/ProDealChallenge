@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using ProDeal.Application.Interfaces;
-using ProDeal.Application.Mapper;
+using ProDeal.Application.AutoMapper;
 using ProDeal.Application.Services;
 
 namespace ProDeal.Application.Extensions

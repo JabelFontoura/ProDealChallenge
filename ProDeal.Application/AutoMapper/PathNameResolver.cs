@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ProDealChallenge.Domain.Models;
 
-namespace ProDeal.Application.Mapper
+namespace ProDeal.Application.AutoMapper
 {
     public class PathNameResolver
     {

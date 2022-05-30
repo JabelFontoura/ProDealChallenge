@@ -3,7 +3,7 @@ using ProDeal.Application.Dtos;
 using ProDeal.Application.Dtos.Pagination;
 using ProDealChallenge.Domain.Models;
 
-namespace ProDeal.Application.Mapper
+namespace ProDeal.Application.AutoMapper
 {
     public class ItemFolderProfile : Profile
     {

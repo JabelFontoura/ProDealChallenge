@@ -1,5 +1,4 @@
 using ProDeal.Application.Extensions;
-using ProDeal.Application.Mapper;
 using ProDeal.Infrastructure;
 using ProDealChallenge.WebApi.Middleware;
 using System.Text.Json.Serialization;
