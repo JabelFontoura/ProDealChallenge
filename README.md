@@ -21,7 +21,7 @@
   - All interecations can be done using the swagger page.
 
 ## Database
-- There is no need to setup a dabase instance for this application cause it's configured to run in AWS RDS.
+- There is no need to setup a database instance for this application cause it's configured to run in AWS RDS.
 - However, if you want to use your local instance you need replace to your configuration in **[appsettings.json](ProDealChallenge/ProDealChallenge.WebApi/appsettings.json)**.
 
 
